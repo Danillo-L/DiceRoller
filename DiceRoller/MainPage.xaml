@@ -18,14 +18,16 @@
                 Spacing="60"
                 HorizontalOptions="Center">
                 
-                <Label Text="6"
-                   FontSize="90"
-                   HorizontalOptions="Center"/>
+                <Label 
+                    x:Name="ResultLabel" 
+                    Text="6"
+                    FontSize="90"
+                    HorizontalOptions="Center"/>
 
                 <Picker 
                     WidthRequest="300" 
                     Title="Selecione um número"
-                    x:Name="numberPicker"
+                    x:Name="SidesPicker"
                     >
 
                     <Picker.Items>
@@ -47,9 +49,12 @@
 
                 </Picker>
 
-                <Button Text="Rolar o Dado"
+                <Button 
+                    x:Name="RollButton" 
+                    Text="Rolar o Dado"
                     BackgroundColor="Gray"
                     WidthRequest="250"
+                    Clicked="RollButton_Clicked"
                     />
 
 
