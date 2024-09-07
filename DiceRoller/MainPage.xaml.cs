@@ -1,4 +1,6 @@
-﻿namespace DiceRoller;
+﻿using System.Xml.Serialization;
+
+namespace DiceRoller;
 
 public partial class MainPage : ContentPage
 {
@@ -6,6 +8,22 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
+
+    Random random = new Random();
+
+    public void Random(int x, int y)
+
+
+
+ 
+
+
+
+
+
+
+
+
 
     //Sortear um número aleatório através do clique do botão
     //Devolver o número sorteado para a interface
