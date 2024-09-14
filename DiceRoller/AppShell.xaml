@@ -6,9 +6,15 @@
     xmlns:local="clr-namespace:DiceRoller"
     Shell.FlyoutBehavior="Disabled">
 
+    <TabBar>
     <ShellContent
-        Title=""
+        Title="Main"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="MainPage"/>
+        
+    <ShellContent
+        Title="Sobre"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="About"/>
+    </TabBar>
 </Shell>

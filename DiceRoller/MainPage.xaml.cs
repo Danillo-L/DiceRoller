@@ -1,4 +1,7 @@
-﻿using System.Xml.Serialization;
+﻿
+using Microsoft.Extensions.Options;
+using System.Diagnostics;
+using System.Xml.Serialization;
 
 namespace DiceRoller;
 
@@ -14,10 +17,41 @@ public partial class MainPage : ContentPage
 
     private void RollButton_Clicked(object sender, EventArgs e)
     {
-        int numeroSelecionado = Convert.ToInt32(SidesPicker.SelectedItem);
-        int numeroSorteado = new Random().Next(1, numeroSelecionado + 1);
-        ResultLabel.Text = numeroSorteado.ToString();
+
+        double qtdDados = Convert.ToDouble(DiceEntry.Text);
+        double dadoModificador = Convert.ToDouble(ModifierPicker.SelectedItem);
+        
+        int soma = 0;
+        string resultados = "";
+        int numeroSelecionado = 0;
+        int numeroSorteado = 0;
+
+        for (int i = 0; i < qtdDados; i++)
+        {
+            numeroSelecionado = Convert.ToInt32(SidesPicker.SelectedItem);
+            numeroSorteado = new Random().Next(1, numeroSelecionado + 1);
+            soma = soma + numeroSorteado;
+            
+            
+        }
+
+        ResultLabel.Text = "Você tirou " + soma.ToString();
+   
+
+
     }
+   
+    
+
+
+
+
+
+
+
+
+
+
 
 
 

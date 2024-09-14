@@ -5,7 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="150"
+            Spacing="30"
             Padding="70"
             HorizontalOptions="Center">
 
@@ -15,14 +15,15 @@
                    HorizontalTextAlignment="Center"/>
 
             <VerticalStackLayout
-                Spacing="60"
+                Spacing="40"
                 HorizontalOptions="Center">
                 
                 <Label 
                     x:Name="ResultLabel" 
-                    Text="6"
-                    FontSize="90"
+                    Text="Rolete!"
+                    FontSize="40"
                     HorizontalOptions="Center"/>
+             
 
                 <Picker 
                     WidthRequest="300" 
@@ -48,7 +49,44 @@
 
 
                 </Picker>
+                
+                <VerticalStackLayout
+                    Spacing="1">
+                <Label 
+                    Text="Insira a quantidade de dados"/>
 
+                
+
+                <Entry
+                    x:Name="DiceEntry"
+                    WidthRequest="300"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="1">
+                <Label
+                    Text="Selecione um modificador para o dado"/>
+                <Label
+                    x:Name="DiceModifier"
+                    Text=""/>
+                   
+
+                <Picker 
+                    x:Name="ModifierPicker"
+                    WidthRequest="300">
+                    <Picker.Items>
+
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+
+                    </Picker.Items>
+                </Picker>
+                </VerticalStackLayout>
+                
+                    
                 <Button 
                     x:Name="RollButton" 
                     Text="Rolar o Dado"
